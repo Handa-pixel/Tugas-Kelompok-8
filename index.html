@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<!-- ========================================================== -->
+<!-- HEAD                                                       -->
+<!-- ========================================================== -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oleh-Oleh Khas Palembang</title>
+<meta name="description" content="Pempek, kemplang, songket, dan oleh-oleh asli Palembang dikirim ke seluruh Indonesia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" id="favicon">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!-- ========================================================== -->
+<!-- BODY                                                       -->
+<!-- ========================================================== -->
+<body>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 1 : NAVBAR                                          -->
+<!-- ========================================================== -->
+<header class="nav">
+  <a class="logo" href="#beranda" aria-label="Oleh-Oleh Palembang, ke Beranda">
+    <img class="logo-img" id="logoNavImg" alt="Logo Oleh-Oleh Palembang" hidden>
+    <span class="logo-text">Oleh-Oleh <em>Palembang</em></span>
+  </a>
+  <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+  <nav id="menu">
+    <a href="#beranda" data-id="Beranda" data-en="Home">Beranda</a>
+    <div class="dd">
+      <a href="#produk" data-id="Produk &#9662;" data-en="Products &#9662;">Produk &#9662;</a>
+      <div class="dd-list" id="menuChips">
+        <a href="#produk" data-id="Semua Produk" data-en="All Products">Semua Produk</a>
+        <a href="#produk" data-cat="makanan" data-id="Makanan" data-en="Food">Makanan</a>
+        <a href="#produk" data-cat="Camilan" data-id="Camilan" data-en="Snacks">Camilan</a>
+        <a href="#produk" data-cat="aksesoris" data-id="Aksesoris" data-en="Accessories">Aksesoris</a>
+        <a href="#produk" data-cat="pakaian" data-id="Pakaian" data-en="Clothing">Pakaian</a>
+        <a href="#produk" data-cat="kain" data-id="Kain" data-en="Fabric">Kain</a>
+      </div>
+    </div>
+    <div class="dd">
+      <a href="#tentang" data-id="Tentang Kami &#9662;" data-en="About Us &#9662;">Tentang Kami &#9662;</a>
+      <div class="dd-list">
+        <a href="#sejarah" data-id="Sejarah" data-en="Our Story">Sejarah</a>
+        <a href="#umkm" data-id="UMKM" data-en="Local Business">UMKM</a>
+        <a href="#visi" data-id="Visi &amp; Misi" data-en="Vision &amp; Mission">Visi &amp; Misi</a>
+        <a href="#keunggulan" data-id="Keunggulan" data-en="Why Choose Us">Keunggulan</a>
+      </div>
+    </div>
+    <a href="#tim" data-id="Tim" data-en="Team">Tim</a>
+    <a href="#review" data-id="Review" data-en="Reviews">Review</a>
+    <div class="dd">
+      <a href="#faq" data-id="Bantuan &#9662;" data-en="Help &#9662;">Bantuan &#9662;</a>
+      <div class="dd-list">
+        <a href="#cara" data-id="Cara Pesan" data-en="How to Order">Cara Pesan</a>
+        <a href="#faq">FAQ</a>
+        <a href="#kontak" data-id="Kontak" data-en="Contact">Kontak</a>
+        <a href="#lokasi" data-id="Lokasi" data-en="Location">Lokasi</a>
+      </div>
+    </div>
+    <button class="lang" id="lang">ID | EN</button>
+  </nav>
+</header>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 2 : HERO                                            -->
+<!-- ========================================================== -->
+<section class="hero" id="beranda">
+  <div class="hero-text">
+    <p class="tag" data-id="Cita rasa Bumi Sriwijaya" data-en="Taste of the Land of Sriwijaya">Cita rasa Bumi Sriwijaya</p>
+    <h1 data-id="Oleh-oleh asli Palembang, sampai ke tangan Anda" data-en="Authentic Palembang gifts, delivered to you">Oleh-oleh asli Palembang, sampai ke tangan Anda</h1>
+    <p class="lead" data-id="Pempek, kemplang, kopi Semendo, hingga songket tenun lokal. Dikemas aman untuk dibawa pulang atau dikirim ke luar kota." data-en="Pempek, kemplang, Semendo coffee, and locally woven songket. Packed safely to take home or ship out of town.">Pempek, kemplang, kopi Semendo, hingga songket tenun lokal. Dikemas aman untuk dibawa pulang atau dikirim ke luar kota.</p>
+    <a class="btn" href="#produk" data-id="Lihat Produk" data-en="Shop Now">Lihat Produk</a>
+    <a class="btn ghost" href="#kontak" data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</a>
+  </div>
+  <div class="slot hero-img" data-slot="hero" data-label="Foto Jembatan Ampera"></div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 3 : STATISTIK                                       -->
+<!-- ========================================================== -->
+<section class="stats">
+  <div><b>100%</b><span><i data-id="ikan segar pilihan" data-en="select fresh fish">ikan segar pilihan</i></span></div>
+  <div><b>5</b><span><i data-id="kategori produk" data-en="product categories">kategori produk</i></span></div>
+  <div><b>0</b><span><i data-id="pengawet buatan" data-en="artificial preservatives">pengawet buatan</i></span></div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 4 : PRODUK                                          -->
+<!-- ========================================================== -->
+<section class="sec" id="produk">
+  <h2 data-id="Produk Kami" data-en="Our Products">Produk Kami</h2>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 5 : TENTANG KAMI                                    -->
+<!-- ========================================================== -->
+<section class="sec alt" id="tentang">
+  <h2 data-id="Tentang Kami" data-en="About Us">Tentang Kami</h2>
+  <div class="zig">
+    <article class="zig-item" id="sejarah">
+      <div class="txt" data-n="01">
+        <h3 data-id="Sejarah &amp; Latar Belakang" data-en="Our Story">Sejarah &amp; Latar Belakang</h3>
+        <p data-id="Toko kami berdiri untuk melestarikan warisan kuliner dan budaya Bumi Sriwijaya, serta memudahkan wisatawan dan perantau menikmati oleh-oleh asli Palembang tanpa repot." data-en="Our shop was founded to preserve the culinary and cultural heritage of the Land of Sriwijaya, and to help travelers and expats enjoy authentic Palembang gifts with ease.">Toko kami berdiri untuk melestarikan warisan kuliner dan budaya Bumi Sriwijaya, serta memudahkan wisatawan dan perantau menikmati oleh-oleh asli Palembang tanpa repot.</p>
+      </div>
+      <div class="slot about-img" data-slot="story" data-label="Foto Toko / Cerita Kami"></div>
+    </article>
+    <article class="zig-item" id="umkm">
+      <div class="txt" data-n="02">
+        <h3 data-id="Dukung UMKM Lokal" data-en="Supporting Local Business">Dukung UMKM Lokal</h3>
+        <p data-id="Kami bermitra dengan pengrajin tenun, petani kopi Semendo, dan komunitas pembuat kemplang tradisional. Setiap pembelian ikut menggerakkan ekonomi lokal." data-en="We partner with weavers, Semendo coffee farmers, and traditional kemplang makers. Every purchase supports the local economy.">Kami bermitra dengan pengrajin tenun, petani kopi Semendo, dan komunitas pembuat kemplang tradisional. Setiap pembelian ikut menggerakkan ekonomi lokal.</p>
+      </div>
+      <div class="slot about-img" data-slot="umkm" data-label="Foto Pengrajin / Mitra UMKM"></div>
+    </article>
+    <article class="zig-item" id="visi">
+      <div class="txt" data-n="03">
+        <h3 data-id="Visi &amp; Misi" data-en="Vision &amp; Mission">Visi &amp; Misi</h3>
+        <p><b data-id="Visi:" data-en="Vision:">Visi:</b> <span data-id="Menjadi pusat oleh-oleh Palembang terpercaya yang membawa cita rasa dan budaya lokal ke seluruh penjuru Indonesia." data-en="To be the most trusted Palembang gift center, bringing local flavor and culture across Indonesia.">Menjadi pusat oleh-oleh Palembang terpercaya yang membawa cita rasa dan budaya lokal ke seluruh penjuru Indonesia.</span></p>
+        <p><b data-id="Misi:" data-en="Mission:">Misi:</b> <span data-id="Menyediakan produk berkualitas tinggi, pelayanan terbaik, dan menjaga kelestarian kuliner serta kerajinan tradisional Palembang." data-en="Provide high-quality products, the best service, and preserve Palembang's traditional food and crafts.">Menyediakan produk berkualitas tinggi, pelayanan terbaik, dan menjaga kelestarian kuliner serta kerajinan tradisional Palembang.</span></p>
+      </div>
+      <div class="slot about-img" data-slot="visi" data-label="Foto Suasana Toko"></div>
+    </article>
+    <article class="zig-item" id="keunggulan">
+      <div class="txt" data-n="04">
+        <h3 data-id="Keunggulan Kami" data-en="Why Choose Us">Keunggulan Kami</h3>
+        <ul>
+          <li data-id="Pilihan lengkap: hampers makanan khas, kue, aksesoris, pakaian, dan kain songket dalam satu toko." data-en="Complete range: hampers of local food, cakes, accessories, clothing, and songket fabric in one shop.">Pilihan lengkap: hampers makanan khas, kue, aksesoris, pakaian, dan kain songket dalam satu toko.</li>
+          <li data-id="Asli &amp; higienis: pempek ikan segar pilihan, cuko gula batok asli, tanpa pengawet buatan, songket ditenun pengrajin lokal." data-en="Authentic &amp; hygienic: fresh select fish pempek, real palm sugar cuko, no artificial preservatives, songket woven by local artisans.">Asli &amp; higienis: pempek ikan segar pilihan, cuko gula batok asli, tanpa pengawet buatan, songket ditenun pengrajin lokal.</li>
+          <li data-id="Dikemas cantik &amp; aman: keranjang anyaman berpita siap jadi hadiah, kemasan vakum/beku standar luar kota." data-en="Beautifully &amp; safely packed: ribbon-tied woven baskets ready to gift, vacuum/frozen packaging for long-distance shipping.">Dikemas cantik &amp; aman: keranjang anyaman berpita siap jadi hadiah, kemasan vakum/beku standar luar kota.</li>
+        </ul>
+      </div>
+      <div class="slot about-img" data-slot="usp" data-label="Foto Hampers Oleh-Oleh"></div>
+    </article>
+  </div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 6 : TIM                                             -->
+<!-- ========================================================== -->
+<section class="sec" id="tim">
+  <h2 data-id="Tim Kami" data-en="Our Team">Tim Kami</h2>
+  <div class="team" id="team"></div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 7 : REVIEW                                          -->
+<!-- ========================================================== -->
+<section class="sec alt" id="review">
+  <h2 data-id="Kata Pembeli" data-en="What Buyers Say">Kata Pembeli</h2>
+  <div class="reviews" id="reviews"></div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 8 : CARA PESAN                                      -->
+<!-- ========================================================== -->
+<section class="sec steps" id="cara">
+  <h2 data-id="Cara Pesan" data-en="How to Order">Cara Pesan</h2>
+  <div class="st">
+    <div><i>1</i><h3 data-id="Pilih Produk" data-en="Pick Products">Pilih Produk</h3><p data-id="Jelajahi kategori dan pilih oleh-oleh favorit." data-en="Browse categories and choose your favorites.">Jelajahi kategori dan pilih oleh-oleh favorit.</p></div>
+    <div><i>2</i><h3 data-id="Chat WhatsApp" data-en="Chat on WhatsApp">Chat WhatsApp</h3><p data-id="Klik Pesan, pesan terisi otomatis." data-en="Tap Order, the message fills in automatically.">Klik Pesan, pesan terisi otomatis.</p></div>
+    <div><i>3</i><h3 data-id="Kami Kemas &amp; Kirim" data-en="We Pack &amp; Ship">Kami Kemas &amp; Kirim</h3><p data-id="Dikemas aman, siap dibawa atau dikirim." data-en="Packed safely, ready to carry or ship.">Dikemas aman, siap dibawa atau dikirim.</p></div>
+  </div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 9 : FAQ                                             -->
+<!-- ========================================================== -->
+<section class="sec alt2" id="faq">
+  <div class="faq-side">
+    <h2>FAQ</h2>
+    <p class="faq-lead" data-id="Jawaban singkat seputar pesanan, pengiriman, dan daya tahan produk." data-en="Quick answers about ordering, shipping, and how long our products last.">Jawaban singkat seputar pesanan, pengiriman, dan daya tahan produk.</p>
+    <div class="slot cutout faq-img" data-slot="faq" data-label="Foto FAQ"></div>
+  </div>
+  <details><summary data-id="Berapa lama pempek tahan?" data-en="How long does pempek last?">Berapa lama pempek tahan?</summary><p data-id="Pempek segar tahan 1-2 hari di suhu ruang, 5-7 hari di kulkas, dan beberapa minggu di freezer." data-en="Fresh pempek lasts 1-2 days at room temperature, 5-7 days refrigerated, and several weeks frozen.">Pempek segar tahan 1-2 hari di suhu ruang, 5-7 hari di kulkas, dan beberapa minggu di freezer.</p></details>
+  <details><summary data-id="Apakah bisa dikirim ke luar kota?" data-en="Can you ship out of town?">Apakah bisa dikirim ke luar kota?</summary><p data-id="Bisa. Kami mengemas dengan vakum, styrofoam, dan es gel agar tetap segar." data-en="Yes. We pack with vacuum seal, styrofoam, and ice gel to keep it fresh.">Bisa. Kami mengemas dengan vakum, styrofoam, dan es gel agar tetap segar.</p></details>
+  <details><summary data-id="Aman dibawa naik pesawat?" data-en="Is it safe to take on a plane?">Aman dibawa naik pesawat?</summary><p data-id="Aman. Kami menyediakan kemasan khusus bagasi dan opsi titip ke bandara." data-en="Yes. We offer luggage-ready packaging and airport drop-off options.">Aman. Kami menyediakan kemasan khusus bagasi dan opsi titip ke bandara.</p></details>
+  <details><summary data-id="Bagaimana cara memesan?" data-en="How do I order?">Bagaimana cara memesan?</summary><p data-id="Hubungi kami lewat WhatsApp atau formulir di bawah, sebutkan produk dan jumlahnya." data-en="Contact us via WhatsApp or the form below, stating the products and quantity.">Hubungi kami lewat WhatsApp atau formulir di bawah, sebutkan produk dan jumlahnya.</p></details>
+  <div class="faq-cta">
+    <div>
+      <h3 data-id="Masih ada pertanyaan?" data-en="Still have questions?">Masih ada pertanyaan?</h3>
+      <p data-id="Tanyakan langsung, kami balas lewat WhatsApp." data-en="Ask us directly, we reply on WhatsApp.">Tanyakan langsung, kami balas lewat WhatsApp.</p>
+    </div>
+    <a class="btn" id="faqWa" href="#" target="_blank" rel="noopener" data-id="Chat WhatsApp" data-en="Chat on WhatsApp">Chat WhatsApp</a>
+  </div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 10 : KONTAK                                         -->
+<!-- ========================================================== -->
+<section class="sec alt" id="kontak">
+  <div class="contact-grid">
+    <div class="contact-main">
+      <h2 data-id="Hubungi Kami" data-en="Contact Us">Hubungi Kami</h2>
+      <p class="contact-lead" data-id="Isi formulir ini dan pesan Anda langsung terbuka di WhatsApp. Cocok untuk memesan produk, bertanya soal pengiriman, atau menitip ke bandara." data-en="Fill in this form and your message opens straight in WhatsApp. Great for ordering, asking about shipping, or airport drop-off.">Isi formulir ini dan pesan Anda langsung terbuka di WhatsApp. Cocok untuk memesan produk, bertanya soal pengiriman, atau menitip ke bandara.</p>
+      <form id="form">
+        <div class="lbl" data-id="Apa yang bisa kami bantu?" data-en="How can we help?">Apa yang bisa kami bantu?</div>
+        <div class="topics" role="radiogroup" aria-label="Topik">
+          <label class="topic"><input type="radio" name="topik" value="Pemesanan" checked><span data-id="Pemesanan" data-en="Order">Pemesanan</span></label>
+          <label class="topic"><input type="radio" name="topik" value="Pengiriman"><span data-id="Pengiriman" data-en="Shipping">Pengiriman</span></label>
+          <label class="topic"><input type="radio" name="topik" value="Menghubungi admin"><span data-id="Tanya admin" data-en="Ask admin">Tanya admin</span></label>
+        </div>
+        <p class="topic-hint" id="topicHint" aria-live="polite"></p>
+        <label class="field"><span data-id="Nama" data-en="Name">Nama</span><input name="nama" autocomplete="name" required></label>
+        <label class="field"><span data-id="Pesan" data-en="Message">Pesan</span><textarea name="pesan" rows="4" required></textarea></label>
+        <button class="btn" type="submit" data-id="Kirim via WhatsApp" data-en="Send via WhatsApp">Kirim via WhatsApp</button>
+      </form>
+    </div>
+    <div class="slot cutout contact-img" data-slot="kontak" data-label="Foto Kontak"></div>
+  </div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 11 : LOKASI                                         -->
+<!-- ========================================================== -->
+<section class="sec" id="lokasi">
+  <h2 data-id="Temukan Kami" data-en="Find Us">Temukan Kami</h2>
+  <div class="chips" id="locChips"></div>
+  <div class="loc">
+    <iframe id="siteMap" loading="lazy" title="Peta"></iframe>
+    <div class="loc-info">
+      <div class="loc-main">
+        <h3 id="siteName"></h3>
+        <p id="siteAddress"></p>
+        <a class="btn" id="siteDir" href="#" target="_blank" rel="noopener" data-id="Buka di Google Maps" data-en="Open in Google Maps">Buka di Google Maps</a>
+      </div>
+      <dl>
+        <div><dt>WhatsApp</dt><dd><a id="siteWa" href="#"></a></dd></div>
+        <div><dt data-id="Jam buka" data-en="Opening hours">Jam buka</dt><dd id="siteHours"></dd></div>
+        <div><dt>Email</dt><dd id="siteEmail"></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================================== -->
+<!-- BAGIAN 12 : FOOTER                                         -->
+<!-- ========================================================== -->
+<footer>
+  <a class="footer-logo" id="logoFoot" href="#beranda" aria-label="Kembali ke atas" hidden>
+    <img id="logoFootImg" alt="Logo Oleh-Oleh Palembang">
+  </a>
+  <p class="footer-tag" data-id="Oleh-oleh khas Palembang, dekat bandara Sumatera Selatan." data-en="Palembang souvenirs, right next to South Sumatra airports.">Oleh-oleh khas Palembang, dekat bandara Sumatera Selatan.</p>
+  <p class="footer-copy">&copy; 2026 Oleh-Oleh Khas Palembang</p>
+</footer>
+
+<!-- ========================================================== -->
+<!-- TOMBOL WHATSAPP MENGAMBANG                                 -->
+<!-- ========================================================== -->
+<a class="wa" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.7-1.6c-.2-.4-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.900 11.900 0 0 0 4.600 4c1.700.7 2.300.700 3.100.600a2.600 2.600 0 0 0 1.700-1.200 2.100 2.100 0 0 0 .1-1.200c-.1-.1-.2-.2-.5-.3z"/></svg></a>
+
+<!-- ========================================================== -->
+<!-- SCRIPT                                                     -->
+<!-- ========================================================== -->
+<script src="config.js"></script>
+<script src="js/01-data.js"></script>
+<script src="js/02-foto.js"></script>
+<script src="js/03-info.js"></script>
+<script src="js/04-bahasa-menu.js"></script>
+<script src="js/05-produk.js"></script>
+<script src="js/06-tim.js"></script>
+<script src="js/07-review.js"></script>
+<script src="js/08-formulir.js"></script>
+<script src="js/09-animasi.js"></script>
+<script src="js/10-mulai.js"></script>
+</body>
+</html>

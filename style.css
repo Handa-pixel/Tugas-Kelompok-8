@@ -1,0 +1,23 @@
+/* =====================================================================
+   style.css - DAFTAR ISI CSS
+   File ini hanya memanggil file di folder css/ (urutan = urutan cascade,
+   jangan diacak). Baca satu per satu dari atas ke bawah.
+   ===================================================================== */
+
+@import url("css/01-dasar.css");   /* Warna (variabel), reset, font, dan aturan dasar seluruh halaman */
+@import url("css/02-navbar.css");   /* Menu atas: logo, tautan, dropdown Produk, tombol bahasa, burger */
+@import url("css/03-foto.css");   /* Slot gambar: semua foto memakai kelas .slot */
+@import url("css/04-hero.css");   /* Banner utama (hero) dan animasi masuk */
+@import url("css/05-tombol.css");   /* Tombol .btn dan .btn.ghost */
+@import url("css/06-bagian.css");   /* Judul tiap bagian (.sec), kotak statistik, latar .alt */
+@import url("css/07-produk.css");   /* Chip kategori, grid produk, kartu produk */
+@import url("css/08-tentang.css");   /* Bagian Tentang Kami (kartu zig-zag) */
+@import url("css/09-tim.css");   /* Kartu anggota tim */
+@import url("css/10-review.css");   /* Bagian Review pembeli (3 kartu) */
+@import url("css/11-cara-pesan.css");   /* Bagian Cara Pesan (3 langkah) */
+@import url("css/12-faq.css");   /* Bagian FAQ (details/summary) */
+@import url("css/13-kontak.css");   /* Bagian Hubungi Kami: formulir, foto kontak, gaya dasar input */
+@import url("css/14-lokasi.css");   /* Bagian Temukan Kami: peta dan strip info lokasi */
+@import url("css/15-footer.css");   /* Footer dan tombol WhatsApp mengambang */
+@import url("css/16-animasi.css");   /* Animasi muncul halus saat scroll (.rv) */
+@import url("css/17-responsif.css");   /* Media query: tampilan tablet, HP, dan reduced-motion */
