@@ -1,0 +1,98 @@
+/* css/12-faq.css - Bagian FAQ (details/summary) */
+
+.alt2 {
+  background: var(--bg);
+}
+
+#faq {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 2fr;
+  column-gap: 4rem;
+  align-items: start;
+  padding-top: 3.5rem;
+  padding-bottom: 0;                  /* foto berdiri tepat di tepi bawah section */
+}
+
+/* Kolom kiri: judul FAQ + ruang foto (PNG transparan) di bawahnya */
+.faq-side {
+  grid-column: 1;
+  grid-row: 1 / span 10;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kalimat penjelas tepat di bawah judul FAQ */
+.faq-side h2 {
+  margin-bottom: 0.7rem;
+}
+
+.faq-lead {
+  max-width: 30ch;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  color: #273043b3;
+}
+
+.faq-img {
+  width: 100%;
+  max-width: 380px;                   /* ukuran foto FAQ: ubah di sini (sebelumnya 300px) */
+  aspect-ratio: 4 / 5;
+  flex: none;
+  margin-top: auto;                   /* menempel ke dasar section */
+}
+
+/* Kartu ajakan di bawah daftar pertanyaan */
+#faq .faq-cta {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin: 0.4rem 0 3rem;
+  padding: 1.6rem 2rem;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px #27304318;
+}
+
+.faq-cta h3 {
+  color: var(--bg);
+  font-size: 1.3rem;
+}
+
+.faq-cta p {
+  color: #eff6eecc;
+}
+
+.faq-cta .btn {
+  margin: 0;
+}
+
+#faq details {
+  grid-column: 2;
+}
+
+details {
+  width: 100%;
+  margin: 0 0 0.7rem;
+  padding: 0.85rem 1.3rem;
+  background: var(--white);
+  border: 1px solid #9197ae66;
+  border-radius: 14px;
+}
+
+summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details[open] summary {
+  color: var(--red);
+}
+
+details p {
+  margin-top: 0.5rem;
+}

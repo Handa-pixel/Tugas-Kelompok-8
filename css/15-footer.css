@@ -1,0 +1,56 @@
+/* css/15-footer.css - Footer dan tombol WhatsApp mengambang */
+
+footer {
+  padding: 1.6rem var(--gutter) 1.3rem;
+  background: var(--ink);
+  color: var(--bg);
+  text-align: center;
+}
+
+/* Logo di footer: klik = kembali ke atas. Perataan (kiri/tengah/kanan) diatur dari config.js */
+.footer-logo {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.footer-logo[hidden] {
+  display: none;
+}
+
+.footer-logo img {
+  display: inline-block;
+  height: var(--logo-foot-h, 72px);  /* diatur dari config.js */
+  width: auto;
+  transition: transform 0.25s;
+}
+
+.footer-logo:hover img {
+  transform: translateY(-3px);
+}
+
+/* Kalimat singkat di bawah logo */
+.footer-tag {
+  margin: 0 auto 0.5rem;
+  font-size: 0.92rem;
+  color: #eff6eecc;
+  text-wrap: balance;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: #eff6ee99;
+}
+
+.wa {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 45;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  background: #25d366;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px #0005;
+}

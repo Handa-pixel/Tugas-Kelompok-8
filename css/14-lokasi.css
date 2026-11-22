@@ -1,0 +1,90 @@
+/* css/14-lokasi.css - Bagian Temukan Kami (peta selebar layar + strip info di bawahnya)
+   Bagian Hubungi Kami (formulir + foto) ada di css/13-kontak.css */
+
+/* Temukan Kami: peta selebar layar penuh (tanpa bingkai), info satu baris di bawahnya seperti tiket.
+   Padding kiri-kanan section dipindah ke judul, chip, dan strip info supaya peta bisa menyentuh tepi layar. */
+#lokasi {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+
+#lokasi > h2,
+#lokasi > .chips {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.loc iframe {
+  display: block;
+  width: 100%;
+  height: clamp(320px, 48vh, 460px);   /* menyesuaikan tinggi layar supaya info ikut terlihat */
+  margin: 0;
+  border: 0;
+  filter: saturate(0.75) contrast(1.02); /* warna peta diredam agar selaras dengan palet situs */
+}
+
+/* Strip info: kiri = lokasi, alamat, tombol; kanan = tiga kontak dipisah garis putus-putus */
+.loc-info {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 2.6fr);
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.6rem var(--gutter);
+  background: var(--white);
+  color: var(--ink);
+  border-bottom: 1px solid #9197ae66;
+}
+
+.loc-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.loc-main h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.loc-main p {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: #273043b3;
+}
+
+.loc-main .btn {
+  margin: 0;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.loc-info dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.loc-info dl > div {
+  padding: 0.2rem 1.4rem;
+  border-left: 1px dashed var(--slate);
+}
+
+.loc-info dt {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.loc-info dd {
+  margin: 0.2rem 0 0;
+  font-size: 0.98rem;
+  overflow-wrap: anywhere;
+}
+
+.loc-info dd a {
+  text-decoration: underline;
+}

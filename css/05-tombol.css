@@ -1,0 +1,42 @@
+/* css/05-tombol.css - Tombol .btn dan .btn.ghost */
+
+.btn {
+  display: inline-block;
+  margin: 1.2rem 0.5rem 0 0;
+  padding: 0.7rem 1.6rem;
+  background: var(--red);
+  color: var(--bg);
+  border: 2px solid var(--red);
+  border-radius: 30px;
+  font: 600 0.95rem 'Poppins';
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.25s;
+}
+
+.btn:hover {
+  background: var(--red-lt);
+  border-color: var(--red-lt);
+  transform: translateY(-2px);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--bg);
+  border-color: var(--bg);
+}
+
+.btn.ghost:hover {
+  background: var(--bg);
+  border-color: var(--bg);
+  color: var(--ink);
+}
+
+.sec .btn.ghost {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+
+.sec .btn.ghost:hover {
+  background: var(--ink);
+  color: var(--bg);
+}

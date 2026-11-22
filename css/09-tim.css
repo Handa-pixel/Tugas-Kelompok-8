@@ -1,0 +1,31 @@
+/* css/09-tim.css - Kartu anggota tim */
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.4rem;
+}
+
+.member {
+  padding-bottom: 1rem;
+  background: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 16px #27304318;
+}
+
+.member .slot {
+  aspect-ratio: 4 / 5;
+  margin-bottom: 0.8rem;
+}
+
+.member h3 {
+  font-size: 1.05rem;
+}
+
+.member p {
+  color: var(--red);
+  font-size: 0.85rem;
+  font-weight: 500;
+}

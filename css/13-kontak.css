@@ -1,0 +1,204 @@
+/* css/13-kontak.css - Bagian Hubungi Kami (formulir kiri, foto kanan) dan gaya dasar input
+   Bagian Temukan Kami (peta + info) ada di css/14-lokasi.css */
+
+/* Kontak: latar terang section (.alt), tanpa kartu.
+   Kiri  = judul, penjelasan, formulir (lebar dibatasi supaya nyaman diisi)
+   Kanan = foto PNG transparan berdiri di dasar section, di atas bentuk lengkung samar
+   Jarak bawah section dipindah ke kolom formulir, supaya foto menempel di tepi bawah section. */
+#kontak {
+  padding-bottom: 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  column-gap: 4rem;
+  align-items: stretch;
+}
+
+.contact-main {
+  max-width: 600px;
+  padding-bottom: 5rem;
+}
+
+.contact-main h2 {
+  margin-bottom: 0.8rem;
+}
+
+.contact-lead {
+  max-width: 46ch;
+  margin-bottom: 1.8rem;
+  color: #273043cc;
+}
+
+/* Label di atas kolom isian dan pilihan topik */
+.lbl,
+.field {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.lbl {
+  margin-bottom: 0.6rem;
+}
+
+/* Pilihan topik berupa pil */
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+/* Petunjuk singkat yang berganti mengikuti topik yang dipilih (diatur dari js/08-formulir.js) */
+.topic-hint {
+  min-height: 1.5em;
+  margin-bottom: 1.2rem;
+  font-size: 0.88rem;
+  color: #273043b3;
+}
+
+.topic-hint.swap {
+  animation: hintIn 0.3s both;
+}
+
+@keyframes hintIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+.topic {
+  position: relative;
+}
+
+.topic input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+}
+
+.topic span {
+  display: block;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid #9197aeb3;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.topic:hover input:not(:checked) + span {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.topic input:checked + span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+.topic input:focus-visible + span {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+.field {
+  margin-bottom: 1rem;
+}
+
+#form .field input,
+#form .field textarea {
+  margin: 0.35rem 0 0;
+  padding: 0.75rem 1rem;
+  background: var(--white);
+  border: 1px solid #9197ae99;
+  border-radius: 10px;
+  font-weight: 400;
+  transition: border-color 0.2s;
+}
+
+#form .field input:focus,
+#form .field textarea:focus {
+  border-color: var(--red);
+}
+
+#form textarea {
+  display: block;
+  height: 7rem;
+  resize: vertical;
+}
+
+#form .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.4rem 0 0;
+}
+
+#form .btn::before {
+  content: "";
+  flex: none;
+  width: 20px;
+  height: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* --- Foto kanan --- */
+.contact-grid .contact-img {
+  position: relative;
+  min-height: 440px;
+}
+
+/* Bentuk lengkung samar (warna senada, bukan lingkaran merah) di belakang foto */
+.contact-img::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: min(360px, 88%);
+  height: 80%;
+  transform: translateX(-50%);
+  background: #9197ae26;
+  border-radius: 999px 999px 0 0;
+}
+
+@media (max-width: 760px) {
+  /* HP: formulir di atas, foto di dasar */
+  .contact-main {
+    padding-bottom: 2.5rem;
+  }
+
+  .contact-grid .contact-img {
+    min-height: 320px;
+  }
+}
+
+/* Gaya dasar input, select, textarea (dipakai formulir; aturan #form di atas menimpanya) */
+input,
+select,
+textarea {
+  width: 100%;
+  margin: 0.3rem 0 0.7rem;
+  padding: 0.65rem;
+  background: var(--bg);
+  color: var(--ink);
+  border: 2px solid var(--slate);
+  border-radius: 10px;
+  font: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: var(--red);
+}

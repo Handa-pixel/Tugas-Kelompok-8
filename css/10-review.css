@@ -1,0 +1,91 @@
+/* css/10-review.css - Bagian Review pembeli (kartu kutipan + bintang) */
+
+#review {
+  padding-block: 4rem;
+}
+
+/* Satu baris kartu yang bisa digeser ke samping (geser jari di HP, scroll mendatar atau tarik bilah di desktop) */
+.reviews {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0.4rem 0.2rem 1.2rem;     /* ruang untuk bayangan kartu dan bilah geser */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;     /* kartu berhenti pas di tepi saat digeser */
+  scrollbar-width: thin;
+  scrollbar-color: var(--slate) transparent;
+}
+
+.review {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 min(360px, 85%);         /* lebar tiap kartu; kartu ke-4 sedikit mengintip sebagai petunjuk */
+  scroll-snap-align: start;
+  padding: 2.2rem 1.6rem 1.4rem;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 4px 16px #27304318;
+}
+
+/* tanpa efek muncul pelan, supaya kartu yang mengintip di tepi tetap terlihat */
+.reviews .review {
+  opacity: 1;
+  transform: none;
+}
+
+/* tanda kutip besar sebagai hiasan di pojok kartu */
+.review::before {
+  content: "\201C";
+  position: absolute;
+  top: 0.3rem;
+  right: 1.2rem;
+  font: 700 4.5rem/1 'Playfair Display', serif;
+  color: var(--red);
+  opacity: 0.18;
+}
+
+.stars {
+  color: #e8a317;
+  font-size: 1.05rem;
+  letter-spacing: 0.12em;
+}
+
+.stars span {
+  color: #9197ae66;               /* bintang kosong */
+}
+
+.review blockquote {
+  flex: 1;
+  margin: 0.8rem 0 1.4rem;
+}
+
+.review figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--slate);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 42px;
+  height: 42px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 50%;
+  font: 600 1rem 'Poppins', sans-serif;
+}
+
+.review figcaption b {
+  display: block;
+  font-size: 0.95rem;
+}
+
+.review figcaption small {
+  display: block;
+  font-size: 0.8rem;
+  color: #273043b3;
+}

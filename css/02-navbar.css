@@ -1,0 +1,113 @@
+/* css/02-navbar.css - Menu atas: logo, tautan, dropdown Produk, tombol bahasa, burger */
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem var(--gutter);
+  background: var(--ink);
+  color: var(--bg);
+  border-bottom: 1px solid #eff6ee24;   /* garis tipis: pembatas saat menu menempel di section biru tua */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  color: var(--bg);
+}
+
+/* Logo gambar: tinggi tetap, lebar menyesuaikan, tidak ikut mengecil */
+.logo-img {
+  display: block;
+  flex: none;
+  height: var(--logo-nav-h, 40px);   /* diatur dari config.js */
+  width: auto;
+}
+
+.logo-img[hidden],
+.logo-text[hidden] {
+  display: none;
+}
+
+/* config.js: navbarPos 'kanan' = logo di kanan tulisan */
+.logo.flip {
+  flex-direction: row-reverse;
+}
+
+.logo em {
+  font-style: normal;
+  color: var(--red-lt);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+nav > a:hover,
+.dd > a:hover {
+  color: var(--red-lt);
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--bg);
+  font-size: 1.6rem;
+}
+
+.dd {
+  position: relative;
+}
+
+.dd-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px #0005;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+}
+
+.dd:hover .dd-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dd-list a {
+  display: block;
+  padding: 0.55rem 1rem;
+}
+
+.dd-list a:hover {
+  background: var(--red);
+  color: var(--bg);
+}
+
+.lang {
+  background: var(--red);
+  color: var(--bg);
+  border: 0;
+  border-radius: 20px;
+  padding: 0.3rem 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang:hover {
+  background: var(--red-lt);
+}

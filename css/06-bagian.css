@@ -1,0 +1,53 @@
+/* css/06-bagian.css - Judul tiap bagian (.sec), kotak statistik, latar .alt */
+
+.sec {
+  padding: 5rem var(--gutter);
+}
+
+.sec h2 {
+  margin-bottom: 2rem;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  line-height: 1.2;
+}
+
+.stats {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: min(900px, 90%);
+  margin: -4.5rem auto 0;
+  padding: 1.6rem 0;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 14px 40px #27304330;
+  text-align: center;
+}
+
+.stats > div {
+  padding: 0.3rem 1rem;
+}
+
+.stats > div + div {
+  border-left: 1px solid #9197ae66;
+}
+
+.stats b {
+  display: block;
+  font: 600 2.6rem/1.2 'Poppins';
+  color: var(--red);
+}
+
+.stats span {
+  display: block;
+  font-size: 0.9rem;
+  color: #273043cc;
+}
+
+.stats i {
+  font-style: normal;
+}
+
+.alt {
+  background: var(--tint);
+}

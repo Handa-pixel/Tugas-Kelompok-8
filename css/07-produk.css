@@ -1,0 +1,138 @@
+/* css/07-produk.css - Chip kategori, grid produk, kartu produk */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+
+.chip {
+  padding: 0.35rem 1.1rem;
+  background: none;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 20px;
+  font: 500 0.9rem 'Poppins';
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.chip.on {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--bg);
+}
+
+/* Grid produk: tampilan daftar (setelah kategori diklik) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.4rem;
+}
+
+/* Beranda (Semua): 5 kartu kategori sebaris */
+.grid.overview {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;               /* gambar di atas, teks di bawah */
+  grid-template-rows: auto 1fr auto;
+  background: var(--white);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px #27304318;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 12px 28px #27304328;
+}
+
+.cat-card {
+  cursor: pointer;
+}
+
+/* Slot gambar produk: kotak 1:1 (ubah rasio di sini: 4 / 3 = lebih pendek) */
+.card .slot {
+  aspect-ratio: 1 / 1;
+  background: #9197ae20;
+}
+
+/* Foto produk utuh (tidak terpotong), dengan jarak 8px dari tepi */
+.card .slot img {
+  inset: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .slot img {
+  transform: scale(1.04);
+}
+
+/* label "Foto ..." disembunyikan kalau gambar berhasil dimuat */
+.slot:not(.empty) img ~ .ph {
+  display: none;
+}
+
+.card .body {
+  padding: 1.1rem 1.2rem 0.4rem;
+}
+
+.card h3 {
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.card small {
+  display: block;
+  margin-top: 0.2rem;
+  color: #273043b3;
+}
+
+.price {
+  margin-top: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--red);
+}
+
+.card .act {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.4rem 1.2rem 1.1rem;
+}
+
+.card .act button,
+.card .act a {
+  flex: 1;
+  padding: 0.45rem;
+  background: none;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  border-radius: 10px;
+  text-align: center;
+  font: 500 0.85rem 'Poppins';
+  cursor: pointer;
+}
+
+.card .act .buy {
+  background: var(--red);
+  color: var(--bg);
+  border-color: var(--red);
+  transition: background 0.2s;
+}
+
+.card .act .buy:hover {
+  background: var(--red-lt);
+  border-color: var(--red-lt);
+}

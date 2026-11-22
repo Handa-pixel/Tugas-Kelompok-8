@@ -1,0 +1,207 @@
+/* css/08-tentang.css - Bagian Tentang Kami (kartu zig-zag) */
+
+.zig {
+  display: grid;
+  gap: 5rem;
+}
+
+.zig-item {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+.zig-item .txt {
+  grid-row: 1;
+  grid-column: 1 / 7;
+  position: relative;
+  z-index: 2;
+  padding: 2.2rem 2.4rem;
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: 0 14px 36px #27304322;
+}
+
+.zig-item .about-img {
+  grid-row: 1;
+  grid-column: 6 / 13;
+  aspect-ratio: 4 / 3.2;
+  border-radius: 18px;
+}
+
+.zig-item:nth-child(even) .txt {
+  grid-column: 7 / 13;
+}
+
+.zig-item:nth-child(even) .about-img {
+  grid-column: 1 / 8;
+}
+
+.txt::before {
+  content: attr(data-n);
+  display: block;
+  font: 600 2.8rem 'Poppins';
+  line-height: 1;
+  color: var(--red);
+}
+
+.txt h3 {
+  margin: 0.4rem 0 0.7rem;
+  font-size: 1.6rem;
+}
+
+.txt p {
+  margin-bottom: 0.6rem;
+}
+
+.txt ul {
+  padding: 0;
+  list-style: none;
+}
+
+.txt li {
+  position: relative;
+  margin-bottom: 0.7rem;
+  padding-left: 1.4rem;
+}
+
+.txt li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background: var(--red);
+}
+
+/* =====================================================================
+   URUTAN: 01 Sejarah, 02 UMKM, 03 Visi & Misi, 04 Keunggulan (foto hampers, paling bawah)
+   Layout bertahap menuju foto lebar di paling bawah:
+     01 foto samping (7 kolom), kartu di samping
+     02 foto lebih lebar (8 kolom), kartu di samping
+     03 foto lebar (10 kolom), kartu turun ke bawah foto di sisi kiri
+     04 foto selebar penuh, kartu di bawah foto di tengah
+   ===================================================================== */
+
+/* --- perlakuan warna sama untuk semua foto supaya transisinya menyatu --- */
+.zig-item .about-img {
+  box-shadow: 14px 14px 0 var(--slate);
+}
+
+.zig-item:nth-child(even) .about-img {
+  box-shadow: -14px 14px 0 var(--slate);
+}
+
+.zig-item .about-img img {
+  filter: saturate(0.9) contrast(1.03) brightness(1.02);
+}
+
+.zig-item .about-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, #eff6ee59 0%, transparent 32%),
+    linear-gradient(0deg, #27304347 0%, transparent 30%);
+}
+
+/* --- layar lebar: foto makin lebar dan makin pendek ke arah bawah --- */
+@media (min-width: 981px) {
+  /* 02 UMKM */
+  .zig-item:nth-child(2) .about-img {
+    grid-column: 1 / 9;
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .zig-item:nth-child(2) .txt {
+    grid-column: 8 / 13;
+  }
+
+  /* 03 Visi & Misi: kartu di bawah foto, sisi kiri */
+  .zig-item:nth-child(3) .about-img {
+    grid-column: 3 / 13;
+    aspect-ratio: 1.9 / 1;
+  }
+
+  .zig-item:nth-child(3) .txt {
+    grid-row: 2;
+    grid-column: 1 / 8;
+    margin-top: -4rem;
+  }
+}
+
+/* --- 04 Keunggulan: foto 5 hampers selebar penuh, kartu di bawah, tengah --- */
+.zig-item:nth-child(4) .about-img {
+  grid-column: 1 / -1;
+  aspect-ratio: 2.2 / 1;
+}
+
+.zig-item:nth-child(4) .about-img img {
+  object-position: center;
+}
+
+@media (min-width: 761px) {
+  .zig-item:nth-child(4) .txt {
+    grid-row: 2;
+    grid-column: 2 / 12;
+    margin-top: -5.5rem;
+    padding: 1.8rem 2.4rem;
+    display: grid;
+    grid-template-columns: minmax(190px, 0.8fr) 2fr;
+    column-gap: 2.4rem;
+    align-items: start;
+    align-content: center;
+  }
+
+  .zig-item:nth-child(4) .txt::before {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .zig-item:nth-child(4) .txt h3 {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+
+  .zig-item:nth-child(4) .txt ul {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    padding-left: 2.4rem;
+    border-left: 1px dashed var(--slate);
+  }
+
+  .zig-item:nth-child(4) .txt li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* tablet sempit: isi kartu ditumpuk */
+@media (min-width: 761px) and (max-width: 980px) {
+  .zig-item:nth-child(4) .txt {
+    display: block;
+    grid-column: 1 / -1;
+    margin: -4rem 1.5rem 0;
+  }
+
+  .zig-item:nth-child(4) .txt ul {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+/* HP: bayangan slate untuk semua, kartu foto 01 dan 04 hanya menimpa sedikit */
+@media (max-width: 760px) {
+  .zig .zig-item:nth-child(n) .about-img {
+    box-shadow: 8px 8px 0 var(--slate);
+  }
+
+  .zig .zig-item:nth-child(1) .txt,
+  .zig .zig-item:nth-child(4) .txt {
+    margin-top: -0.8rem;
+  }
+}
